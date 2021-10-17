@@ -1,0 +1,40 @@
+<div class="text-center">
+  <h1>Sign up</h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 offset-sm-3">
+
+    <%= form_with(model: @user) do |f| %>
+
+      <div class="mb-3">
+        <%= f.label :name, 'Name' %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :email, 'Email' %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password, 'Password' %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password_confirmation, 'Confirmation' %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.fields_for :family do |family| %> # 別のモデルのフォームはfield_forメソッドを使う
+        <%= family.label :name, 'FamilyName' %>
+        <%= family.text_field :name, class: 'form-control' %>
+        <% end %>
+      </div>
+
+      <%= f.submit 'Sign up', class: 'btn btn-primary w-100' %>
+    <% end %>
+  </div>
+</div>
