@@ -4,12 +4,24 @@ class NotesController < ApplicationController
     def show
 #        binding.pry
 #        @user = User.find(params[:user_id])
-        @note = Note.find(params[:id])
+##        note = Note.find(params[:id]) ##
 #        binding.pry
 #        @pagy, notes = pagy(@user.notes.order(id: :desc))
 #        binding.pry
 #        @pagy,@notes = pagy(@notes.order(id: :desc))
 #        binding.pry
+#      binding.pry
+      notes = Note.all
+#      binding.pry
+      comments = Comment.all
+#       comments = Comment.where(family_id: current_user.family_id)
+#      binding.pry
+      # それぞれの複数インスタンスを1つの配列にする
+      @instances = notes | comments
+#      binding.pry
+      # 作成降順に並び替え
+      @instances.sort!{ |a, b| b.created_at <=> a.created_at }
+#      binding.pry
     end
 
     def new
