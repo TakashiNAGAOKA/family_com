@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col-sm-6 offset-sm-3">
 
-    <%= form_with model: @user,url: families_path do |f| %>
+    <%= form_with(model: @user) do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
       <div class="mb-3">
         <%= f.label :name, 'Name' %>
@@ -26,6 +26,8 @@
         <%= f.label :password_confirmation, 'Confirmation' %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
+
+      <%= # hidden_field_tag :family_id, @user.family_id %>
 
       <%= f.submit 'Add family', class: 'btn btn-primary w-100' %>
     <% end %>

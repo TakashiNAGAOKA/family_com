@@ -26,6 +26,8 @@
         <%= f.label :password_confirmation, 'Confirmation' %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
+  
+      <%= # hidden_field_tag :family_id, @user.family_id %>
 
       <%= f.submit 'Add family', class: 'btn btn-primary w-100' %>
     <% end %>

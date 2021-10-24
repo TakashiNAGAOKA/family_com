@@ -1,0 +1,51 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-sm-4">
+      <%= form_with(model: [@user,@note]) do |f| %>
+
+        <div class="mb-3">
+            <%= f.radio_button :subject_id, '1' %>
+            <%= f.label :subject_id, "学校", {value: '1', style: "display: inline-block;"} %>
+            <%= f.radio_button :subject_id, '2' %>
+            <%= f.label :subject_id, "部活", {value: '2', style: "display: inline-block;"} %>
+            <%= f.radio_button :subject_id, '3' %>
+            <%= f.label :subject_id, "宿題", {value: '3', style: "display: inline-block;"} %>
+            <%= f.radio_button :subject_id, '4' %>
+            <%= f.label :subject_id, "習い事", {value: '4', style: "display: inline-block;"} %>
+            <%= f.radio_button :subject_id, '5' %>
+            <%= f.label :subject_id, "仕事", {value: '5', style: "display: inline-block;"} %>
+            <%= f.radio_button :subject_id, '6' %>
+            <%= f.label :subject_id, "健康", {value: '6', style: "display: inline-block;"} %>
+        </div>
+
+        <div class="mb-3">
+        <div class="mb-3">
+            <%= f.radio_button :status, '5' %>
+            <%= f.label :status, "絶好調", {value: '5', style: "display: inline-block;"} %>
+            <%= f.radio_button :status, '4' %>
+            <%= f.label :status, "まーまー", {value: '4', style: "display: inline-block;"} %>
+            <%= f.radio_button :status, '3' %>
+            <%= f.label :status, "普通", {value: '3', style: "display: inline-block;"} %>
+            <%= f.radio_button :status, '2' %>
+            <%= f.label :status, "良くない", {value: '2', style: "display: inline-block;"} %>
+            <%= f.radio_button :status, '1' %>
+            <%= f.label :status, "調子が悪い", {value: '1', style: "display: inline-block;"} %>
+        </div>
+        </div>
+
+        <div class="mb-3">
+          <%= f.label :note %>
+          <%= f.text_area :note, class: 'form-control', rows: 5 %>
+        </div>
+        <%= f.submit 'Post', class: 'btn btn-primary w-100' %>
+      <% end %>
+    </aside>
+  </div>
+<% else %>
+  <div class="bg-secondary p-3 p-sm-5 my-4 rounded">
+    <div class="text-center text-white">
+      <h1>Welcome to the notes</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+<%# if notes.any? %>
+  <ul class="list-unstyled mt-2">
+    <% # notes.each do |note| %>
+      <li class="d-flex">
+          <div>
+            <p><%= note.note %></p>
+          </div>
+      </li>
+    <% # end %>
+  </ul>
+  <%== pagy_bootstrap_nav(@pagy) %>
+<%# end %>

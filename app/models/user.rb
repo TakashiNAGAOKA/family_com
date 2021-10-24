@@ -6,6 +6,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   belongs_to :family
+  has_many :notes
+  has_many :comments
 end
 
 # familyを先に作っておく

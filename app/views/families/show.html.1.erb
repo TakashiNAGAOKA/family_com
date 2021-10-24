@@ -1,9 +1,15 @@
-<div class="text-center">
-  <h1>Family</h1>
-</div>
-
 <div class="row">
-  <div class="col-sm-6 offset-sm-3">
+  <aside class="col-sm-4">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"><%= @family.name %></h3>
+      </div>
+      <div class="card-header">
+        <h3 class="card-title">家族のメンバーを表示</h3>
+      </div>
+    </div>
+  </aside>
+</div>
 
     <%= form_with model: @user,url: families_path do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
@@ -26,8 +32,8 @@
         <%= f.label :password_confirmation, 'Confirmation' %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
       </div>
-
+  
       <%= f.submit 'Add family', class: 'btn btn-primary w-100' %>
     <% end %>
-  </div>
-</div>
+
+　<%= # button_to '家族を追加', {controller: 'families', action: 'new'}, {method: :get }%>
