@@ -28,9 +28,20 @@
 <ul>
   
   <% @comments.each do |comment| %>
-    <li><%#= link_to comment.id, comment %> : <%= comment.comment %>:<%= comment.created_at %>:by<%= comment.user_id %></li>
+    <li><%#= link_to comment.id, comment %> : <%= comment.comment %>&gt;:<%= comment.created_at %>:by<%= comment.user_id %></li>
   <% end %>
 </ul>
 <%== pagy_nav(@pagy) %>
 
-<%# = link_to '新規メッセージの投稿', new_comment_path %>
+  <div class="row">
+    <aside class="col-sm-4">
+      <%#= form_with model: @comment,url: user_note_comments_path do |f| %>
+      <%= form_with model: @comment do |f| %>
+        <div class="mb-3">
+          <%= f.text_area :comment, class: 'form-control', rows: 5 %>
+        </div>
+        <%= f.submit 'コメントを追加する', class: 'btn btn-primary w-100' %>
+      <% end %>
+    </aside>
+  </div>  
+<%#= link_to '新規コメントの投稿', new_user_note_comment_path %>
