@@ -2,34 +2,22 @@
   <aside class="col-sm-4">
     <div class="card">
       <div class="card-header">
-        <% @instances.each do |instance| %>
-        <% if instance.class == Note %>
+        <%# @note.each do |note| %>
         <%# Noteの表示 %> 
-        <h3 class="card-title">サブジェクト<%= instance.subject_id %></h3>
+        <h3 class="card-title">サブジェクト<%= @note.subject_id %></h3>
       </div>
 
       <div class="card-header">
-        <h3 class="card-title">ユーザ<%= instance.user_id %></h3>
+        <h3 class="card-title">ユーザ<%= @note.user_id %></h3>
       </div>
 
       <div class="card-header">
-        <h3 class="card-title">ステイタス<%= instance.status %></h3>
+        <h3 class="card-title">ステイタス<%= @note.status %></h3>
       </div>
       <div class="card-header">
-        <h3 class="card-title">ノート<%= instance.note %></h3>
+        <h3 class="card-title">ノート<%= @note.note %></h3>
       </div>
-
-      <% else %>
-      <%# Commentの表示 %> 
-      <div class="card-header">
-        <h3 class="card-title">ステイタス<%= instance.user_id %></h3>
-      </div>
-
-      <div class="card-header">
-        <h3 class="card-title">ステイタス<%= instance.comment %></h3>
-      </div>
-      <% end %>
-    <% end %>
+    <%# end %>
 
       <div>
       <%# = button_to 'コメントを追加', {controller: 'comment', action: 'new'}, {method: :get }%>
@@ -37,3 +25,12 @@
     </div>
   </aside>
 </div>
+<ul>
+  
+  <% @comments.each do |comment| %>
+    <li><%#= link_to comment.id, comment %> : <%= comment.comment %>:<%= comment.created_at %>:by<%= comment.user_id %></li>
+  <% end %>
+</ul>
+<%== pagy_nav(@pagy) %>
+
+<%# = link_to '新規メッセージの投稿', new_comment_path %>
