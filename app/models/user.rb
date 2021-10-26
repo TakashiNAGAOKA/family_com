@@ -9,5 +9,3 @@ class User < ApplicationRecord
   has_many :notes
   has_many :comments
 end
-
-# familyを先に作っておく
