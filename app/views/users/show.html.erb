@@ -1,2 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+最近の出来事
+<%= link_to '新規ノートを投稿する', new_user_note_path(current_user.id) %>
+<ul>
+  <% @notes.each do |note| %>
+    <% @user.id = note.user.id %>
+    <li><%= link_to note.id, user_note_path(@user.id,note.id) %> : <%= note.note %>&gt;:<%= note.created_at %>:by::<%= note.user.name %></li>
+  <% end %>
+</ul>
+<%== pagy_nav(@pagy) %>

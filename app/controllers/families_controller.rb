@@ -2,7 +2,7 @@ class FamiliesController < ApplicationController
 
   def show
 #    binding.pry
-   @family = Family.find(current_user.family_id)
+    @pagy,@users = pagy(User.where(family_id: current_user.family_id))
 #    binding.pry
   end
 

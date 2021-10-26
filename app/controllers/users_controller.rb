@@ -7,6 +7,9 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @pagy,@notes = pagy(Note.where(user_id: current_user.id).order(created_at: :desc))
+    #@pagy,@users = pagy(User.where(family_id: current_user.family_id))
+
   end
 
   def new

@@ -25,10 +25,10 @@
     </div>
   </aside>
 </div>
+
 <ul>
-  
   <% @comments.each do |comment| %>
-    <li><%#= link_to comment.id, comment %> : <%= comment.comment %>&gt;:<%= comment.created_at %>:by<%= comment.user_id %></li>
+    <li><%#= link_to comment.id, comment %> : <%= comment.comment %>&gt;:<%= comment.created_at %>:by::<%= comment.user.name %></li>
   <% end %>
 </ul>
 <%== pagy_nav(@pagy) %>
