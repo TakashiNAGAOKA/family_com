@@ -4,7 +4,7 @@
     <div class="card">
       <ul>
         <% @users.each do |user| %>
-        <li><%= link_to user.name, user %> : &gt;<%= user.email %></li>
+        <li><%= link_to user.name, user_path(user.id) %> : &gt;<%= user.email %></li>
         <% end %>
       </ul>
     <%== pagy_nav(@pagy) %>
