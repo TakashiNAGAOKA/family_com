@@ -2,19 +2,31 @@
   <aside class="col-sm-4">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">サブジェクト
-        <%= @note.subject.name %></h3>
+        <h4 class="card-title">サブジェクト</h4>
+        <div class="card-body">
+          <h2><%= @note.subject.name %></h2>
+        </div>
       </div>
 
       <div class="card-header">
-        <h3 class="card-title">ユーザ<%= @note.user.name %></h3>
+        <h4 class="card-title">ユーザ</h4>
+        <div class="card-body">
+          <h2><%= @note.user.name %></h2>
+        </div>
       </div>
 
       <div class="card-header">
-        <h3 class="card-title">ステイタス<%= @note.status %></h3>
+        <h4 class="card-title">ステイタス</h4>
+        <div class="card-body">
+          <h2><%= @note.status %></h2>
+        </div>
       </div>
+      
       <div class="card-header">
-        <h3 class="card-title">ノート<%= @note.note %></h3>
+        <h4 class="card-title">ノート</h4>
+        <div class="card-body">
+          <h3><%= @note.note %></h3>
+        </div>
       </div>
 
     </div>

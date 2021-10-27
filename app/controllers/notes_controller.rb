@@ -15,11 +15,11 @@ class NotesController < ApplicationController
     @note = current_user.notes.build(note_params)
     if @note.save
       flash[:success] = 'ノートを投稿しました。'
-      redirect_to root_url
+      redirect_to user_path(current_user.id)
     else
       @pagy, @notes = pagy(current_user.notes.order(id: :desc))
       flash.now[:danger] = 'ノートの投稿に失敗しました。'
-      render 'toppages/index'
+      redirect_to user_path(current_user.id)
     end
   end
 
