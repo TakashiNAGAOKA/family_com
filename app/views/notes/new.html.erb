@@ -37,7 +37,12 @@
           <%= f.label :note %>
           <%= f.text_area :note, class: 'form-control', rows: 3,maxlength: "500" %>
         </div>
-        <%= f.submit 'Post', class: 'btn btn-primary w-100' %>
+        <div>
+        <%= f.submit '投稿', class: 'btn btn-primary w-100' %>
+        </div>
+        <div>
+        <%= link_to '戻る', user_path(current_user.id), class: 'btn btn-lg btn-primary' %>
+        </div>
       <% end %>
     </aside>
   </div>
