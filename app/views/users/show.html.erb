@@ -3,7 +3,7 @@
 <ul>
   <% @notes.each do |note| %>
     <% @user.id = note.user.id %>
-    <li><%= link_to note.id, user_note_path(@user.id,note.id) %> : <%= note.note %>&gt;:<%= note.created_at %>:by::<%= note.user.name %></li>
+    <li><%= link_to note.id, user_note_path(@user.id,note.id) %> :<%= note.subject.name %>:<%= note.note %>&gt;:<%= note.created_at %>:by::<%= note.user.name %></li>
   <% end %>
 </ul>
 <%== pagy_nav(@pagy) %>
