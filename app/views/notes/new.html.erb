@@ -35,7 +35,7 @@
 
         <div class="mb-3">
           <%= f.label :note %>
-          <%= f.text_area :note, class: 'form-control', rows: 5 %>
+          <%= f.text_area :note, class: 'form-control', rows: 3,maxlength: "500" %>
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary w-100' %>
       <% end %>

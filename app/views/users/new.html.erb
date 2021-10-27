@@ -9,12 +9,12 @@
       <%= render 'layouts/error_messages', model: f.object %>
       <div class="mb-3">
         <%= f.label :name, 'Name' %>
-        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.text_field :name, class: 'form-control' ,maxlength: "50" %>
       </div>
 
       <div class="mb-3">
         <%= f.label :email, 'Email' %>
-        <%= f.email_field :email, class: 'form-control' %>
+        <%= f.email_field :email, class: 'form-control' ,maxlength: "255" %>
       </div>
 
       <div class="mb-3">
@@ -30,7 +30,7 @@
       <div class="mb-3">
         <%= f.fields_for :family do |family| %> 
         <%= family.label :name, 'FamilyName' %>
-        <%= family.text_field :name, class: 'form-control' %>
+        <%= family.text_field :name, class: 'form-control',maxlength: "50" %>
         <% end %>
       </div>
 
