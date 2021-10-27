@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @pagy,@notes = pagy(Note.where(user_id: current_user.id).order(created_at: :desc))
+    @pagy,@notes = pagy(Note.where(user_id: params[:id]).order(created_at: :desc))
+
   end
 
   def new
