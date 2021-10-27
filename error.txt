@@ -1,0 +1,100 @@
+2021-10-27T01:30:29.092584+00:00 app[web.1]: /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:777:in `const_defined?': wrong constant name UsersController.1 (NameError)
+2021-10-27T01:30:29.092585+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:777:in `cdef?'
+2021-10-27T01:30:29.092585+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:608:in `autoload_file'
+2021-10-27T01:30:29.092585+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:538:in `block in set_autoloads_in_dir'
+2021-10-27T01:30:29.092586+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:733:in `block in ls'
+2021-10-27T01:30:29.092586+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:725:in `foreach'
+2021-10-27T01:30:29.092586+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:725:in `ls'
+2021-10-27T01:30:29.092587+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:533:in `set_autoloads_in_dir'
+2021-10-27T01:30:29.092587+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader/callbacks.rb:71:in `block in on_namespace_loaded'
+2021-10-27T01:30:29.092587+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader/callbacks.rb:70:in `each'
+2021-10-27T01:30:29.092587+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader/callbacks.rb:70:in `on_namespace_loaded'
+2021-10-27T01:30:29.092588+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader/callbacks.rb:55:in `block in on_dir_autoloaded'
+2021-10-27T01:30:29.092588+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader/callbacks.rb:41:in `synchronize'
+2021-10-27T01:30:29.092589+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader/callbacks.rb:41:in `on_dir_autoloaded'
+2021-10-27T01:30:29.092589+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:30:in `require'
+2021-10-27T01:30:29.092589+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:416:in `const_get'
+2021-10-27T01:30:29.092590+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:416:in `block (2 levels) in eager_load'
+2021-10-27T01:30:29.092590+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:733:in `block in ls'
+2021-10-27T01:30:29.092590+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:725:in `foreach'
+2021-10-27T01:30:29.092591+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:725:in `ls'
+2021-10-27T01:30:29.092591+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:404:in `block in eager_load'
+2021-10-27T01:30:29.092591+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:393:in `synchronize'
+2021-10-27T01:30:29.092592+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:393:in `eager_load'
+2021-10-27T01:30:29.092592+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:508:in `each'
+2021-10-27T01:30:29.092592+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/loader.rb:508:in `eager_load_all'
+2021-10-27T01:30:29.092595+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/application/finisher.rb:133:in `block in <module:Finisher>'
+2021-10-27T01:30:29.092595+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/initializable.rb:32:in `instance_exec'
+2021-10-27T01:30:29.092595+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/initializable.rb:32:in `run'
+2021-10-27T01:30:29.092601+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/initializable.rb:61:in `block in run_initializers'
+2021-10-27T01:30:29.092602+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:228:in `block in tsort_each'
+2021-10-27T01:30:29.092602+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+2021-10-27T01:30:29.092602+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:431:in `each_strongly_connected_component_from'
+2021-10-27T01:30:29.092603+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:349:in `block in each_strongly_connected_component'
+2021-10-27T01:30:29.092603+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:347:in `each'
+2021-10-27T01:30:29.092603+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:347:in `call'
+2021-10-27T01:30:29.092603+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:347:in `each_strongly_connected_component'
+2021-10-27T01:30:29.092604+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:226:in `tsort_each'
+2021-10-27T01:30:29.092604+00:00 app[web.1]: from /app/vendor/ruby-3.0.0/lib/ruby/3.0.0/tsort.rb:205:in `tsort_each'
+2021-10-27T01:30:29.092607+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/initializable.rb:60:in `run_initializers'
+2021-10-27T01:30:29.092610+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/application.rb:391:in `initialize!'
+2021-10-27T01:30:29.092610+00:00 app[web.1]: from /app/config/environment.rb:5:in `<main>'
+2021-10-27T01:30:29.092611+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+2021-10-27T01:30:29.092611+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+2021-10-27T01:30:29.092611+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+2021-10-27T01:30:29.092612+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+2021-10-27T01:30:29.092612+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+2021-10-27T01:30:29.092612+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/zeitwerk-2.4.2/lib/zeitwerk/kernel.rb:34:in `require'
+2021-10-27T01:30:29.092612+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/activesupport-6.1.4.1/lib/active_support/dependencies.rb:332:in `block in require'
+2021-10-27T01:30:29.092613+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/activesupport-6.1.4.1/lib/active_support/dependencies.rb:299:in `load_dependency'
+2021-10-27T01:30:29.092613+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/activesupport-6.1.4.1/lib/active_support/dependencies.rb:332:in `require'
+2021-10-27T01:30:29.092613+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:54:in `require_relative'
+2021-10-27T01:30:29.092613+00:00 app[web.1]: from config.ru:3:in `block in <main>'
+2021-10-27T01:30:29.092614+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `eval'
+2021-10-27T01:30:29.092614+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/builder.rb:116:in `new_from_string'
+2021-10-27T01:30:29.092614+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/builder.rb:105:in `load_file'
+2021-10-27T01:30:29.092615+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/builder.rb:66:in `parse_file'
+2021-10-27T01:30:29.092615+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+2021-10-27T01:30:29.092615+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/server.rb:249:in `app'
+2021-10-27T01:30:29.092615+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/server.rb:422:in `wrapped_app'
+2021-10-27T01:30:29.092616+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/server.rb:312:in `block in start'
+2021-10-27T01:30:29.092616+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/server.rb:379:in `handle_profiling'
+2021-10-27T01:30:29.092616+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/rack-2.2.3/lib/rack/server.rb:311:in `start'
+2021-10-27T01:30:29.092616+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/commands/server/server_command.rb:39:in `start'
+2021-10-27T01:30:29.092617+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+2021-10-27T01:30:29.092617+00:00 app[web.1]: from <internal:kernel>:90:in `tap'
+2021-10-27T01:30:29.092617+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/commands/server/server_command.rb:135:in `perform'
+2021-10-27T01:30:29.092618+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/thor-1.1.0/lib/thor/command.rb:27:in `run'
+2021-10-27T01:30:29.092618+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/thor-1.1.0/lib/thor/invocation.rb:127:in `invoke_command'
+2021-10-27T01:30:29.092618+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/thor-1.1.0/lib/thor.rb:392:in `dispatch'
+2021-10-27T01:30:29.092619+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/command/base.rb:69:in `perform'
+2021-10-27T01:30:29.092619+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/command.rb:48:in `invoke'
+2021-10-27T01:30:29.092619+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/railties-6.1.4.1/lib/rails/commands.rb:18:in `<main>'
+2021-10-27T01:30:29.092619+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+2021-10-27T01:30:29.092620+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+2021-10-27T01:30:29.092620+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+2021-10-27T01:30:29.092620+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+2021-10-27T01:30:29.092622+00:00 app[web.1]: from /app/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+2021-10-27T01:30:29.092623+00:00 app[web.1]: from bin/rails:5:in `<main>'
+2021-10-27T01:30:29.223835+00:00 heroku[web.1]: Process exited with status 1
+2021-10-27T01:30:29.277302+00:00 heroku[web.1]: State changed from starting to crashed
+2021-10-27T01:31:50.105409+00:00 app[api]: Starting process with command `rails db:migrate` by user takashi.nagaoka@gmail.com
+2021-10-27T01:31:55.084177+00:00 heroku[run.2481]: Awaiting client
+2021-10-27T01:31:55.087000+00:00 heroku[run.2481]: State changed from starting to up
+2021-10-27T01:31:55.105451+00:00 heroku[run.2481]: Starting process with command `rails db:migrate`
+2021-10-27T01:32:00.891019+00:00 heroku[run.2481]: Process exited with status 0
+2021-10-27T01:32:00.978790+00:00 heroku[run.2481]: State changed from up to complete
+2021-10-27T01:35:02.687648+00:00 app[api]: Starting process with command `rails db:seed` by user takashi.nagaoka@gmail.com
+2021-10-27T01:35:07.588052+00:00 heroku[run.3560]: Awaiting client
+2021-10-27T01:35:07.602572+00:00 heroku[run.3560]: Starting process with command `rails db:seed`
+2021-10-27T01:35:07.727511+00:00 heroku[run.3560]: State changed from starting to up
+2021-10-27T01:35:13.081091+00:00 heroku[run.3560]: Process exited with status 0
+2021-10-27T01:35:13.179155+00:00 heroku[run.3560]: State changed from up to complete
+2021-10-27T01:36:11.988835+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sheltered-ocean-41303.herokuapp.com request_id=67e5ab19-e211-4f7f-aac6-a2820926d782 fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
+2021-10-27T01:36:12.458077+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sheltered-ocean-41303.herokuapp.com request_id=dc55cd6b-51e0-4b26-a580-fa7a65366eb5 fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
+2021-10-27T01:36:42.039505+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sheltered-ocean-41303.herokuapp.com request_id=0da1a434-6a9e-4a78-adfe-4aadb3c04a07 fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
+2021-10-27T01:36:42.485917+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sheltered-ocean-41303.herokuapp.com request_id=f8e23e4a-5c57-44e2-ab80-19dfeba23eaa fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
+2021-10-27T01:37:06.339118+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sheltered-ocean-41303.herokuapp.com request_id=bf86b7fb-9076-4129-b2bf-b75a8a7a6851 fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
+2021-10-27T01:37:06.706070+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sheltered-ocean-41303.herokuapp.com request_id=52f09da4-589d-41bf-93a9-323ad9d36e6c fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
+2021-10-27T01:37:13.233632+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=sheltered-ocean-41303.herokuapp.com request_id=e2d170f3-2347-46ea-912b-888fa9944e9b fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
+2021-10-27T01:37:13.603974+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=sheltered-ocean-41303.herokuapp.com request_id=c4f1812d-d952-42c6-a7f9-35ab49f9e24e fwd="113.43.244.145" dyno= connect= service= status=503 bytes= protocol=https
