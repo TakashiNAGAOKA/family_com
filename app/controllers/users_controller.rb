@@ -29,7 +29,6 @@ class UsersController < ApplicationController
       flash.now[:danger] = 'ユーザの登録に失敗しました。'
       render :new
     end
-#   redirect_to users_path(@user)
   end
   
 private

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   post '/users/:user_id/notes/:id', to: 'comments#create', as: 'comment'
 
-  resources :families, only: [:new,:create,:show,:edit,:update]
+  resources :families, only: [:new,:create,:show]
 # patch 'add_family_user' ,to: 'families#????'  
   
   

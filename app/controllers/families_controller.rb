@@ -9,34 +9,18 @@ class FamiliesController < ApplicationController
   end
 
   def create
-   @family = Family.find(current_user.family_id)
+    @family = Family.find(current_user.family_id)
     @user = User.new(user_params)
     @user.family_id = @family.id
 
     if (@user.save)
       flash[:success] = 'ユーザを登録しました。'
-      redirect_to @user
+      redirect_to family_path(current_user.family_id)
       
     else
       flash.now[:danger] = 'ユーザの登録に失敗しました。'
       render :new
     end
-#   redirect_to users_path(@user)
-  end
-  
-  def update
-    @user = User.new(user_params[:family])
-    @user.family_id = current_user.family_id
-    
-    if (@user.save)
-      flash[:success] = 'ユーザを登録しました。'
-      redirect_to @user
-      
-    else
-      flash.now[:danger] = 'ユーザの登録に失敗しました。'
-      render :new
-    end
-#   redirect_to users_path(@user)
   end
   
   private
