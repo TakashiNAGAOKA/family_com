@@ -20,4 +20,12 @@ class CommentsController < ApplicationController
 #      render template: 'notes/show'
     end
   end
+  
+  def destroy
+    @comment = current_user.comments.find_by(id: params[:id])
+#    binding.pry
+    @comment.destroy
+    flash[:success] = 'コメントを削除しました。'
+    redirect_back(fallback_location: note_path)
+  end
 end

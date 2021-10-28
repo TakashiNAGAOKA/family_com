@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :create] 
   resources :notes, only: [:new,:create,:show]
-  resources :comments, only: [:create]
+  resources :comments, only: [:create,:destroy]
 
 #  post '/users/:user_id/notes/:id', to: 'comments#create', as: 'comments'
 #  delete '/users/:user_id/notes/:id', to: 'comments#destroy', as: 'comments'

@@ -36,6 +36,12 @@
 <ul>
   <% @comments.each do |comment| %>
     <li><%= comment.comment %>&gt;:<%= comment.created_at %>:by::<%= comment.user.name %></li>
+              <div>
+            <% if current_user == comment.user %>
+              <%= link_to "Delete", comment, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+            <% end %>
+            <%#= render "favorites/favorite_button", micropost: micropost %>
+          </div>
     <% end %>
 </ul>
 <%== pagy_nav(@pagy) %>
