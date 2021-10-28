@@ -2,30 +2,30 @@
   <aside class="col-sm-4">
     <div class="card">
       <div class="card-header">
-        <h5 class="card-title">サブジェクト</h5>
+        <h10 class="card-title">サブジェクト</h10>
         <div class="card-body">
-          <h4><%= @note.subject.name %></h4>
+          <h8><%= @note.subject.name %></h8>
         </div>
       </div>
 
       <div class="card-header">
-        <h5 class="card-title">ユーザ</h5>
+        <h10 class="card-title">ユーザ</h10>
         <div class="card-body">
-          <h4><%= @note.user.name %></h4>
+          <h8><%= @note.user.name %></h8>
         </div>
       </div>
 
       <div class="card-header">
-        <h5 class="card-title">ステイタス</h5>
+        <h10 class="card-title">ステイタス</h10>
         <div class="card-body">
-          <h4><%= @note.status %></h4>
+          <h8><%= @note.status %></h8>
         </div>
       </div>
       
       <div class="card-header">
-        <h5 class="card-title">ノート</h5>
+        <h10 class="card-title">ノート</h10>
         <div class="card-body">
-          <h4><%= @note.note %></h4>
+          <h8><%= @note.note %></h8>
         </div>
       </div>
 
@@ -36,20 +36,20 @@
 <ul>
   <% @comments.each do |comment| %>
     <li><%= comment.comment %>&gt;:<%= comment.created_at %>:by::<%= comment.user.name %></li>
-  <% end %>
+    <% end %>
 </ul>
 <%== pagy_nav(@pagy) %>
 
 <div class="row">
   <aside class="col-sm-4">
     <%#= form_with model: @comment,url: comments_path do |f| %>
-    <%= form_with model: @comment do |f| %>
-    <%#= form_with model: Comment.new do |f| %>
-
-    <%#= render 'layouts/error_messages', model: f.object %>
+    <%#= form_with(model: @comment) do |f| %>
+    <%= form_with model: Comment.new do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
       <div class="mb-3">
         <%= f.text_area :comment, class: 'form-control',rows: 3,maxlength: "255"%>
       </div>
+        <%= f.hidden_field :note_id, :value => @note.id %>
       <%= f.submit 'コメントを追加する', class: 'btn btn-primary w-100' %>
     <% end %>
   </aside>

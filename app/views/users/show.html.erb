@@ -1,9 +1,9 @@
 最近の出来事
-<%= link_to '新規ノートを投稿する', new_user_note_path(current_user.id) %>
+<%= link_to '新規ノートを投稿する', new_note_path %>
 <ul>
   <% @notes.each do |note| %>
-    <% @user.id = note.user.id %>
-    <li><%= link_to note.id, user_note_path(@user.id,note.id) %> :<%= note.subject.name %>:<%= note.note %>&gt;:<%= note.created_at %>:by::<%= note.user.name %></li>
+    <%# @user.id = note.user.id %>
+    <li><%= link_to note.id, note_path(note.id) %> :<%= note.subject.name %>:<%= note.status %>:<%= note.note %>&gt;:<%= note.created_at %>:by::<%= note.user.name %></li>
   <% end %>
 </ul>
 <%== pagy_nav(@pagy) %>

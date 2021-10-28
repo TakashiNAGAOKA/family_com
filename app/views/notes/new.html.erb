@@ -1,7 +1,7 @@
 <% if logged_in? %>
   <div class="row">
     <aside class="col-sm-4">
-      <%= form_with(model: [@user,@note]) do |f| %>
+      <%= form_with(model: @note) do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
         <div class="mb-3">
             <%= f.radio_button :subject_id, '1' %>

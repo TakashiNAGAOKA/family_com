@@ -4,11 +4,12 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id]) 
     @pagy, @comments = pagy(Comment.where(note_id: params[:id]))
-#    @comment = Comment.new
+    @comment = Comment.new
   end
 
   def new
-    @user = User.find(params[:user_id])
+#    @user = User.find(params[:id])
+#    @user = User.new
     @note = Note.new
   end
 
@@ -19,9 +20,9 @@ class NotesController < ApplicationController
       redirect_to user_path(current_user.id)
       
     else
-      @pagy, @notes = pagy(current_user.notes.order(id: :desc))
+#      @pagy, @notes = pagy(current_user.notes.order(id: :desc))
       flash.now[:danger] = 'ノートの投稿に失敗しました。'
-      redirect_to user_path(current_user.id)
+      render :new
     end
   end
 

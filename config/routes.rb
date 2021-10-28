@@ -7,14 +7,14 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
-  resources :users, only: [:index, :show, :create] do
+  resources :users, only: [:index, :show, :create] 
   resources :notes, only: [:new,:create,:show]
-  end
+  resources :comments, only: [:create]
 
-  post '/users/:user_id/notes/:id', to: 'comments#create', as: 'comments'
+#  post '/users/:user_id/notes/:id', to: 'comments#create', as: 'comments'
+#  delete '/users/:user_id/notes/:id', to: 'comments#destroy', as: 'comments'
 
   resources :families, only: [:new,:create,:show]
 # patch 'add_family_user' ,to: 'families#????'  
-  
   
 end
