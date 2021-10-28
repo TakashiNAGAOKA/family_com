@@ -4,6 +4,7 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id]) 
     @pagy, @comments = pagy(Comment.where(note_id: params[:id]))
+    @comment = Comment.new
   end
 
   def new
