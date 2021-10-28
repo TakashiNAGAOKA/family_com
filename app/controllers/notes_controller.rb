@@ -17,12 +17,14 @@ class NotesController < ApplicationController
     @note = current_user.notes.build(note_params)
     if @note.save
       flash[:success] = 'ノートを投稿しました。'
-      redirect_to user_path(current_user.id)
-      
+      redirect_to note_path
     else
 #      @pagy, @notes = pagy(current_user.notes.order(id: :desc))
       flash.now[:danger] = 'ノートの投稿に失敗しました。'
-      render :new
+      redirect_to user_path(current_user.id), alert: 'ノートの投稿に失敗しました'
+#      redirect_to note_path
+#      render :show
+#      render template: "users/show"
     end
   end
 
