@@ -44,8 +44,9 @@
     <aside class="col-sm-4">
       <%#= form_with model: @comment,url: user_note_comments_path do |f| %>
       <%= form_with model: @comment do |f| %>
+      <%#= render 'layouts/error_messages', model: f.object %>
         <div class="mb-3">
-          <%= f.text_area :comment, class: 'form-control', rows: 5 %>
+          <%= f.text_area :comment, class: 'form-control',rows: 3,maxlength: "255"%>
         </div>
         <%= f.submit 'コメントを追加する', class: 'btn btn-primary w-100' %>
       <% end %>
