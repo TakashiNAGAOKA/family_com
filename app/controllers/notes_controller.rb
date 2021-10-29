@@ -20,13 +20,15 @@ class NotesController < ApplicationController
       flash[:success] = 'ノートを投稿しました。'
       redirect_to user_path(current_user.id)
     else
+      @note = Note.new
 #      @pagy, @notes = pagy(current_user.notes.order(id: :desc))
 #      flash.now[:danger] = 'ノートの投稿に失敗しました。'
-      flash[:danger] = 'ノートの投稿に失敗しました。'
-      redirect_to user_path(current_user.id), alert: 'ノートの投稿に失敗しました'
+      flash.now[:danger] = 'ノートの投稿に失敗しました。'
+#      redirect_to user_path(current_user.id), alert: 'ノートの投稿に失敗しました'
 #      redirect_to note_path
-#      render :show
+      render :new
 #      render template: "users/show"
+#      元々のコントローラーのインスタンスを再生成する必要がある。
     end
   end
 

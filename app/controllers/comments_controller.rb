@@ -15,10 +15,18 @@ class CommentsController < ApplicationController
       flash[:success] = 'コメントを登録しました。'
       redirect_to note_path(@comment.note_id)
     else
+#      binding.pry        
+      @note = Note.find(params[:comment][:note_id]) 
+#      binding.pry
+      @pagy, @comments = pagy(Comment.where(note_id: params[:comment][:note_id]))
+#      binding.pry
+      @comment = Comment.new
+#      binding.pry
+
 #      flash.now[:danger] = 'コメントの登録に失敗しました。'
-      flash[:danger] = 'コメントの登録に失敗しました。'
-      redirect_to note_path(@comment.note_id), alert: 'コメントの投稿に失敗しました'
-#      render template: 'notes/show'
+      flash.now[:danger] = 'コメントの登録に失敗しました。'
+#      redirect_to note_path(@comment.note_id), alert: 'コメントの投稿に失敗しました'
+      render template: 'notes/show'
     end
   end
   
