@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-sm-4">
+    <aside class="col-sm-5">
       <%= form_with(model: @note) do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
         <div class="mb-3">
