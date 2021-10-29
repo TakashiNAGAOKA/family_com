@@ -15,7 +15,8 @@ class CommentsController < ApplicationController
       flash[:success] = 'コメントを登録しました。'
       redirect_to note_path(@comment.note_id)
     else
-      flash.now[:danger] = 'コメントの登録に失敗しました。'
+#      flash.now[:danger] = 'コメントの登録に失敗しました。'
+      flash[:danger] = 'コメントの登録に失敗しました。'
       redirect_to note_path(@comment.note_id), alert: 'コメントの投稿に失敗しました'
 #      render template: 'notes/show'
     end
