@@ -2,30 +2,30 @@
   <aside class="col-sm-4">
     <div class="card">
       <div class="card-header">
-        <h10 class="card-title">サブジェクト</h10>
+        <h6 class="card-title">サブジェクト</h6>
         <div class="card-body">
-          <h8><%= @note.subject.name %></h8>
+          <h4><%= @note.subject.name %></h4>
         </div>
       </div>
 
       <div class="card-header">
-        <h10 class="card-title">ユーザ</h10>
+        <h6 class="card-title">ユーザ</h6>
         <div class="card-body">
-          <h8><%= @note.user.name %></h8>
+          <h4><%= @note.user.name %></h4>
         </div>
       </div>
 
       <div class="card-header">
-        <h10 class="card-title">ステイタス</h10>
+        <h6 class="card-title">ステイタス</h6>
         <div class="card-body">
-          <h8><%= @note.status %></h8>
+          <h4><%= @note.status %></h4>
         </div>
       </div>
       
       <div class="card-header">
-        <h10 class="card-title">ノート</h10>
+        <h6 class="card-title">ノート</h6>
         <div class="card-body">
-          <h8><%= @note.note %></h8>
+          <h4><%= @note.note %></h4>
         </div>
       </div>
 
@@ -35,12 +35,11 @@
 
 <ul>
   <% @comments.each do |comment| %>
-    <li><%= comment.comment %>&gt;:<%= comment.created_at %>:by::<%= comment.user.name %></li>
-      <div>
+    <li><%= comment.comment %>&gt;:<%= comment.created_at %>:by::<%= comment.user.name %>
         <% if current_user == comment.user %>
           <%= link_to "Delete", comment, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
         <% end %>
-      </div>
+    </li>
   <% end %>
 </ul>
 <%== pagy_nav(@pagy) %>
