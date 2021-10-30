@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
 #      binding.pry
       @pagy, @comments = pagy(Comment.where(note_id: params[:comment][:note_id]))
 #      binding.pry
-      @comment = Comment.new
+#      @comment = Comment.new
 #      binding.pry
 
 #      flash.now[:danger] = 'コメントの登録に失敗しました。'

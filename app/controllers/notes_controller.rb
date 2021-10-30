@@ -20,7 +20,7 @@ class NotesController < ApplicationController
       flash[:success] = 'ノートを投稿しました。'
       redirect_to user_path(current_user.id)
     else
-      @note = Note.new
+#      @note = Note.new
 #      @pagy, @notes = pagy(current_user.notes.order(id: :desc))
 #      flash.now[:danger] = 'ノートの投稿に失敗しました。'
       flash.now[:danger] = 'ノートの投稿に失敗しました。'
